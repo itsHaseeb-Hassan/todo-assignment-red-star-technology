@@ -8,8 +8,8 @@ import {
   doc,
   onSnapshot,
   updateDoc,
-} from 'firebase/firestore';
-import { db } from '../firebase';
+} from 'firebase/firestore'
+import { db } from '../firebase'
  import { addTodo, deleteTodo, editTodo, setTodos } from '../Redux/Slice/todoSlice';
 
 const TodoScreen = () => {
