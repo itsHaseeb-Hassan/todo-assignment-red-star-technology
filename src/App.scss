@@ -1,0 +1,168 @@
+$primary-color: #3498db;
+$secondary-color: #2c3e50;
+$border-radius: 5px;
+$padding: 10px;
+$success-color: #28a745;
+$success-color-hover: #218838;
+$success-color-active: #1e7e34;
+
+* {
+    background-color: $secondary-color;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: $padding;
+    width: 95%; 
+    .label{
+        color: aliceblue;
+        margin-bottom: 5px;
+    }
+}
+
+.styled-input {
+    width: 100%; 
+    padding: $padding;
+    background-color: aliceblue;
+    border-radius: $border-radius;
+    font-size: 16px;
+    border: 0px;
+    &:focus {
+        outline: none;
+    }
+
+    &::placeholder {
+        color: lighten($secondary-color, 20%);
+    }
+}
+.containerTodo{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    .button{
+        background-color: $primary-color;
+        margin-top:4px;
+        border:0px;
+        height: 37px;
+        border-radius: $border-radius;
+        font-size: 20px;
+        width:100px;
+    }
+}
+.todoScreen {
+    width:700px;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    h1{
+     color: #f2f2f2;
+    }
+    @media screen and (max-width: 768px) {
+        width: 500px;
+    }
+    @media screen and (max-width: 480px) {
+        width: 400px;
+    }
+}
+
+.containerTodo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    .button{
+        color:white;
+    }
+}
+.complete-button {
+    padding: 10px;
+    margin-right: 5px;
+    border-radius: $border-radius;
+    background-color: $success-color;
+    color: white;
+    border: none;
+    cursor: pointer;
+  
+    &:hover {
+      background-color: $success-color-hover;
+    }
+  
+    &:active {
+      background-color: $success-color-active;
+    }
+  }
+  
+  .edit-button {
+    padding: 10px;
+    margin-right: 5px;
+    background-color: blue; 
+    border-radius: $border-radius;
+    color: white;
+    border: none;
+    cursor: pointer;
+  
+    &:hover {
+      background-color: lightblue; 
+    }
+  
+    &:active {
+      background-color: darkblue; 
+    }
+  }
+  
+  .delete-button {
+    padding: 10px ;
+    margin-right: 5px;
+    background-color: red;
+    border-radius: $border-radius; 
+    color: white;
+    border: none;
+    cursor: pointer;
+  
+    &:hover {
+      background-color: pink; 
+    }
+  
+    &:active {
+      background-color: darkred; // Example color
+    }
+  }
+
+.todo-table {
+    width: 98%;
+    border-collapse: collapse;
+    margin-left: 10px;
+    border: 1px solid #ddd;
+    border-radius: $border-radius;
+
+    th, td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: center;
+        
+    }
+
+    th {
+        background-color: #f2f2f2;
+    }
+
+    td {
+        color:white;
+        &.completedItem {
+            text-decoration: line-through;
+            color: red; 
+        }
+    }
+}
